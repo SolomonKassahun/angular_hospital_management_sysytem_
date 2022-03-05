@@ -1,0 +1,40 @@
+<app-nav></app-nav>
+<div class="container-fluid">
+    <div id="login-row" class="row justify-content-center align-items-center" style="margin-top: 10%;">
+        <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+                <h1>Welcome to ABC Hospital</h1>
+                <form #userregister = "ngForm" (ngSubmit)="login()" novalidate>
+                    
+                    <div class="form-group">
+                        <label for="cars">email:</label>
+                        <input class="form-control" type="text" name= "email" placeholder="email" [(ngModel)]="loginInfo.email"/>
+                    <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="cars">Password:</label>
+                        <input class="form-control" type="password" name= "pass" placeholder="password" [(ngModel)]="loginInfo.password"/>
+                    <br>
+                    </div>
+                    <div class="form-group">
+                        
+                        <label for="cars">who are you:</label>
+                        <select name="list"  [(ngModel)]="loginInfo.role">
+                            <option id="doc" value="doc">Doctor</option>
+                            <option id="patient" value="pnt">Patient</option>
+                            <option id="lab" value="lab">Laboratorist</option>
+                            <option id="pharma" value="pharma">Admin</option>
+                        </select>
+                   </div>
+                    <div class="form-group">           
+                        <input type="submit" value="Login" class="btn btn-primary"/>
+                    <br>
+                    </div>
+
+
+                </form>
+                
+            </div> 
+        </div>
+
+    </div>

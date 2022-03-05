@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { routng } from './app.routing';
+import {enableProdMode} from '@angular/core';
+
+enableProdMode();
+
 
 @Component({
   selector: 'app-root',
